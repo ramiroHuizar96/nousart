@@ -18,21 +18,28 @@ body {
 }
 
 header, main, footer {
-  margin-inline: 1rem;
+  margin: 0 1rem;
 }
 
 header {
-  height: 20rem;
+  height: 15rem;
 }
 
 .title {
   font-family: var(--heading-font);
   font-weight: lighter;
   font-size: 3rem;
+  text-align: center;
 }
 
 .nav-bar {
   list-style: none;
+  text-align: right;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 img, .canvideo {
@@ -72,6 +79,13 @@ img, .canvideo {
   .grid-section {
     -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+
+@media (min-width: 1450px) {
+  .grid-section {
+    -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   }
 }
 
