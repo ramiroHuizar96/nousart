@@ -23,9 +23,10 @@ header, main, footer {
 
 header {
   height: 15rem;
+  border-bottom: solid 1px var(--text-color);
 }
 
-.title {
+h1 {
   font-family: var(--heading-font);
   font-weight: lighter;
   font-size: 3rem;
@@ -34,12 +35,24 @@ header {
 
 .nav-bar {
   list-style: none;
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav-bar a {
   text-decoration: none;
   color: var(--text-color);
+}
+
+.nav-bar li {
+  padding: 0 2rem;
 }
 
 img, .canvideo {
@@ -57,7 +70,14 @@ img, .canvideo {
   grid-auto-flow: dense;
 }
 
+.feildtext {
+  font-family: var(--body-font);
+}
+
 @media (min-width: 720px) {
+  h1 {
+    font-size: 3.5rem;
+  }
   img, .canvideo {
     width: 100%;
     height: 100%;
@@ -73,16 +93,28 @@ img, .canvideo {
     grid-column: span 2;
     grid-row: span 2;
   }
+  .nav-bar li {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
   .grid-section {
     -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
+  header, main, footer {
+    margin: 0 6rem;
+  }
 }
 
 @media (min-width: 1450px) {
+  h1 {
+    font-size: 5rem;
+  }
   .grid-section {
     -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -91,12 +123,28 @@ img, .canvideo {
 
 footer {
   height: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
+}
+
+.footer-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+span {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  letter-spacing: 2.5px;
+  opacity: .5;
+  font-size: 1rem;
+}
+
+.bio {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
