@@ -1,11 +1,12 @@
 :root {
   --background-color: #122620;
   --text-color: #f4ebd0;
+  --accent-color: #f4af2e;
   --heading-font:'Oi', cursive;
   --body-font:'Open Sans Condensed', sans-serif;
 }
 
-* {
+body {
   display: block;
   margin: 0;
   padding: 0;
@@ -53,6 +54,11 @@ h1 {
 
 .nav-bar li {
   padding: 0 2rem;
+}
+
+.nav-bar a:hover {
+  color: var(--accent-color);
+  font-weight: bolder;
 }
 
 img, .canvideo {
@@ -132,12 +138,12 @@ footer {
 }
 
 span {
+  margin-top: 2rem;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 0;
   text-align: center;
   letter-spacing: 2.5px;
   opacity: .5;
